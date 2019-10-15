@@ -9,7 +9,6 @@ const assertEqual = function(actual, expected) {
 };
 
 const head = function(arrays) {
-  actual = arrays[0];
   return arrays[0];
 }
 
