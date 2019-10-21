@@ -50,5 +50,11 @@ const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 eqObjects(cd, dc); // => true
 
+eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => true
+
+eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
+eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }) // => false
+
+
 const cd2 = { c: "1", d: ["2", 3, 4] };
 eqObjects(cd, cd2); // => false
