@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+/*const assertEqual = function(actual, expected) {
   let message = "";
   if (actual === expected) {
     message = `🤙🤙🤙 Assertion Passed: ${actual} === ${expected}`;
@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
     message = `💩💩💩 Assertion Failed: ${actual} !== ${expected}`;
   }
   console.log(message);
-};
+};*/
 
 const tail = function(arrays) {
   let array2 = [];
@@ -17,7 +17,9 @@ const tail = function(arrays) {
 };
 
 // TEST CODE
-assertEqual(tail([5,6,7])[0], 6);
+/*assertEqual(tail([5,6,7])[0], 6);
 assertEqual(tail(["Hello", "Lighthouse", "Labs"])[0], "Hello");
 assertEqual(tail([5,7])[0], 7);
-assertEqual(tail([])[0], "Hello");
+assertEqual(tail([])[0], "Hello");*/
+
+module.exports = tail;
