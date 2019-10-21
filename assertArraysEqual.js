@@ -1,23 +1,28 @@
-const eqArrays = function(one,two){
-  let answer = true
+/*const eqArrays = function(one,two){
   let message = "";
 
-  for(x = 0; x < one.length; x++) {
-    if (one[x] !== two[x]) answer = false;
-  }
-  if (answer) {
+  if (one) {
     message = `🤙🤙🤙 Assertion Passed: ${one} === ${two}`;
   } else {
     message = `💩💩💩 Assertion Failed: ${one} !== ${two}`;
   }
   console.log(message);
+}*/
+
+const assertArraysEqual = function(one,two){
+  let answer=true;
+  for(x = 0; x < one.length; x++) {
+    if (one[x] !== two[x]) answer = false;
+  }
+  return answer;
 }
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
+/*eqArrays(assertArraysEqual([1, 2, 3], [1, 2, 3]),true) // => true
+eqArrays(assertArraysEqual([1, 2, 3], [3, 2, 1]),false) // => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+eqArrays(assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]),true) // => true
+eqArrays(assertArraysEqual(["1", "2", "3"], ["1", "2", 3]),false) // => false*/
 
+module.exports = assertArraysEqual
 
 
